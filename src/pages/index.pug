@@ -1,0 +1,27 @@
+<!--template html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/pic.ico" type="image/x-icon">
+  <title>template</title>
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+  include ../pug/components/_mixins
+  .container
+
+    <div data-croak-container>
+      button.stories-prev
+      button.stories-next
+      - var c = 0
+      while c < 3
+        +croakImageEl("img/pic.png")
+        +croakVideoEl("img/pic.png", "img/video/escape.webm", "img/video/escape.mp4", "img/video/orange-mob.mp4", "img/video/orange-mob.webm")
+        - c++
+    </div>
+
+  <script type="module" src="js/main.min.js"></script>
+</body>
+</html>

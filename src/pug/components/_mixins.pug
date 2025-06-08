@@ -1,0 +1,8 @@
+
+mixin croakVideoEl(imagePath, WebmSrc, Mp4Src, MobMp4Src, MobWebmSrc)
+  .croak-video-el(data-video-el data-src-webm=WebmSrc data-src-mp4=Mp4Src data-src-mob-mp4=MobMp4Src data-src-mob-webm=MobWebmSrc)
+    img(src=imagePath)
+
+mixin croakImageEl(imageSrc)
+  .croak-image-el(data-el src=imageSrc)
+    img(src=imageSrc)
